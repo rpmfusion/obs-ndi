@@ -33,7 +33,7 @@ scene to NDI
 sed -i -e 's|/usr/lib|%{_libdir}|' src/obs-ndi.cpp
 
 # Remove tuning
-sed -i -e 's/-mtune=core2 -Ofast//' CMakeLists.txt
+sed -i -e 's/-std=c++11 -mtune=core2 -Ofast//' CMakeLists.txt
 
 
 %build
