@@ -1,6 +1,6 @@
 Name:           obs-ndi
 Version:        4.9.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Network A/V in OBS Studio with NewTek's NDI technology
 
 License:        GPLv2+
@@ -54,5 +54,8 @@ sed -i -e 's/-std=c++11 -mtune=core2 -Ofast//' CMakeLists.txt
 
 
 %changelog
+* Sun Mar 21 2021 Nicolas Chauvet <kwizart@gmail.com> - 4.9.1-2
+- Don't enforce c++11
+
 * Wed Feb 24 2021 Nicolas Chauvet <kwizart@gmail.com> - 4.9.1-1
 - Initial spec file
