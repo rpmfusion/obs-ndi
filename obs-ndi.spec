@@ -1,6 +1,6 @@
 Name:           obs-ndi
 Version:        4.9.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Network A/V in OBS Studio with NewTek's NDI technology
 
 License:        GPLv2+
@@ -54,6 +54,9 @@ sed -i -e 's/-std=c++11 -mtune=core2 -Ofast//' CMakeLists.txt
 
 
 %changelog
+* Wed Aug 04 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 4.9.1-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Sun Mar 21 2021 Nicolas Chauvet <kwizart@gmail.com> - 4.9.1-2
 - Don't enforce c++11
 
