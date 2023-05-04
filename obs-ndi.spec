@@ -16,7 +16,7 @@ BuildRequires:  cmake(Qt5Core)
 BuildRequires:  cmake(Qt5Widgets)
 BuildRequires:  obs-studio-devel
 Requires:       obs-studio
-# A libndi.so.4 implementation is meant to be dlopen
+# A libndi.so.5 implementation is meant to be dlopen
 Requires: ndi-sdk%{?isa}
 
 %description
@@ -29,11 +29,9 @@ scene to NDI
 %prep
 %autosetup -p1
 
-# Where to find the libndi.so.4 library
+# Where to find the libndi.so.5 library
 sed -i -e 's|/usr/lib|%{_libdir}|' src/obs-ndi.cpp
-
-# Remove tuning
-sed -i -e 's/-std=c++11 -mtune=core2 -Ofast//' CMakeLists.txt
+sed -i -e 's|/usr/local/lib|/usr/local/%{_lib}|' src/obs-ndi.cpp
 
 
 %build
