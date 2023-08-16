@@ -7,13 +7,13 @@ License:        GPLv2+
 URL:            https://github.com/Palakis/obs-ndi
 Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
-ExclusiveArch:  i686 x86_64 armv7hl
+ExclusiveArch:  i686 x86_64
 
 BuildRequires:  cmake
 BuildRequires:  make
 BuildRequires:  gcc-c++
-BuildRequires:  cmake(Qt5Core)
-BuildRequires:  cmake(Qt5Widgets)
+BuildRequires:  cmake(Qt6Core)
+BuildRequires:  cmake(Qt6Widgets)
 BuildRequires:  obs-studio-devel
 Requires:       obs-studio
 # A libndi.so.5 implementation is meant to be dlopen
