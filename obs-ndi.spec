@@ -31,8 +31,8 @@ scene to NDI
 %autosetup -p1
 
 # Where to find the libndi.so.5 library
-sed -i -e 's|/usr/lib|%{_libdir}|' src/obs-ndi.cpp
-sed -i -e 's|/usr/local/lib|/usr/local/%{_lib}|' src/obs-ndi.cpp
+sed -i -e 's|/usr/lib|%{_libdir}|' src/plugin-main.cpp
+sed -i -e 's|/usr/local/lib|/usr/local/%{_lib}|' src/plugin-main.cpp
 
 
 %build
