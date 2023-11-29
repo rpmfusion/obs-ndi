@@ -7,7 +7,7 @@ License:        GPLv2+
 URL:            https://github.com/Palakis/obs-ndi
 Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
-ExclusiveArch:  i686 x86_64
+ExclusiveArch:  i686 x86_64 aarch64
 
 BuildRequires:  cmake
 BuildRequires:  make
