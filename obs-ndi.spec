@@ -37,6 +37,8 @@ sed -i -e 's|/usr/local/lib|/usr/local/%{_lib}|' src/plugin-main.cpp
 
 %build
 %cmake \
+  -DENABLE_FRONTEND_API=on \
+  -DENABLE_QT=on \
   -DLINUX_PORTABLE=off
 
 %cmake_build
