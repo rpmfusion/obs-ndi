@@ -1,6 +1,6 @@
 Name:           obs-ndi
-Version:        4.11.1
-Release:        3%{?dist}
+Version:        4.13.0
+Release:        1%{?dist}
 Summary:        Network A/V in OBS Studio with NewTek's NDI technology
 
 License:        GPLv2+
@@ -17,6 +17,7 @@ BuildRequires:  cmake(Qt6Widgets)
 BuildRequires:  obs-studio-devel
 Requires:       obs-studio
 # A libndi.so.5 implementation is meant to be dlopen
+Requires: libndi-sdk%{?isa}
 Requires: ndi-sdk%{?isa}
 
 %description
@@ -53,6 +54,12 @@ sed -i -e 's|/usr/local/lib|/usr/local/%{_lib}|' src/obs-ndi.cpp
 
 
 %changelog
+* Wed Nov 29 2023 Nicolas Chauvet <kwizart@gmail.com> - 4.13.0-1
+- Update to 4.13.0
+
+* Wed Nov 29 2023 Nicolas Chauvet <kwizart@gmail.com> - 4.11.1-4
+- Add missing deps - rhbz#6800
+
 * Wed Aug 16 2023 Nicolas Chauvet <kwizart@gmail.com> - 4.11.1-3
 - Switch to qt6 - rfbz#6747
 
