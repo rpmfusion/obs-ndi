@@ -1,6 +1,6 @@
 Name:           obs-ndi
 Version:        4.13.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Network A/V in OBS Studio with NewTek's NDI technology
 
 License:        GPLv2+
@@ -56,6 +56,9 @@ sed -i -e 's|/usr/local/lib|/usr/local/%{_lib}|' src/plugin-main.cpp
 
 
 %changelog
+* Sun Feb 04 2024 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 4.13.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
+
 * Wed Nov 29 2023 Nicolas Chauvet <kwizart@gmail.com> - 4.13.0-1
 - Update to 4.13.0
 
